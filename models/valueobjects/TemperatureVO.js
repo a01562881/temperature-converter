@@ -1,6 +1,8 @@
-class TemperatureV0 {
-    constructor(value, unit) {
-        this.value = value;
-        this.unit = unit;
-    }
+class TemperatureVO {
+  constructor(value, unit) {
+    this.value = value;
+    this.unit = unit;
+  }
 }
+
+module.exports = TemperatureVO;

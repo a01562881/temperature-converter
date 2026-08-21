@@ -1,13 +1,18 @@
-const { TextInputState } = require('react-native/types_generated/Libraries/ReactPrivate/ReactNativePrivateInterface')
-const TemperatureVO = require('../models/valueobjects')
-
-
+const TemperatureVO = require('../../../models/valueobjects/TemperatureVO');
+const TemperatureManager = require('../../../models/managers/TemperatureManager');
 
 describe('TemperatureManager', () => {
-    test('converts the 23 Celsius to Farenheit', () => {
-        
-        //GIVEN
-        const manager = TemperatureManager()},
-        const fahrenheitTemperature = new TemperatureV0(32, 'FAHRENHEIT')
-    })
-})
+  test('converts the 23 Celsius to Fahrenheit', () => {
+    // GIVEN
+    const manager = TemperatureManager();
+    const celsiusTemperature = new TemperatureVO(23, 'CELSIUS');
+
+    // WHEN
+    const result = manager.convert(celsiusTemperature, 'FAHRENHEIT');
+
+    // THEN
+    expect(result).toBeInstanceOf(TemperatureVO);
+    expect(result.value).toBe(73.4);
+    expect(result.unit).toBe('FAHRENHEIT');
+  });
+});

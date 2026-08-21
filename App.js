@@ -1,8 +1,8 @@
 import React from 'react';
-import { StyleSheet } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
-import { Text } from 'react-native-paper';
 import TemperatureScreen from './screens/TemperatureScreen';
+import { Text } from 'react-native-paper';
 
 export default function App() {
   return (
@@ -11,7 +11,6 @@ export default function App() {
         <Text variant="titleLarge" style={styles.headerTitle}>
           Convertidor
         </Text>
-
         <TemperatureScreen />
       </SafeAreaView>
     </SafeAreaProvider>
@@ -23,7 +22,6 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#ffffff',
   },
-
   headerTitle: {
     paddingTop: 8,
     paddingBottom: 8,
