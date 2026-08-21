@@ -1,5 +1,5 @@
-const TemperatureVO = require('../../../models/valueobjects/TemperatureVO');
-const TemperatureManager = require('../../../models/managers/TemperatureManager');
+const TemperatureVO = require('../models/valueobjects/TemperatureVO');
+const TemperatureManager = require('../models/managers/TemperatureManager');
 
 describe('TemperatureManager', () => {
   test('converts the 23 Celsius to Fahrenheit', () => {
